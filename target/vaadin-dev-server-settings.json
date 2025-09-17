@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "/home/panjipalguna/Documents/crud-vaadin-mysql/./frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "/home/panjipalguna/Documents/crud-vaadin-mysql/./frontend/generated/jar-resources",
+  "staticOutput": "/home/panjipalguna/Documents/crud-vaadin-mysql/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "/home/panjipalguna/Documents/crud-vaadin-mysql/target/classes/META-INF/VAADIN/config",
+  "frontendBundleOutput": "/home/panjipalguna/Documents/crud-vaadin-mysql/target/classes/META-INF/VAADIN/webapp",
+  "devBundleOutput": "/home/panjipalguna/Documents/crud-vaadin-mysql/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "/home/panjipalguna/Documents/crud-vaadin-mysql/target/dev-bundle/config",
+  "jarResourcesFolder": "/home/panjipalguna/Documents/crud-vaadin-mysql/./frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "/home/panjipalguna/Documents/crud-vaadin-mysql/target/sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}
