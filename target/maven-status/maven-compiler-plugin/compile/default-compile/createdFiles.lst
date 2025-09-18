@@ -1,5 +1,1 @@
-com\example\crud\entity\Employee.class
-com\example\crud\ui\EmployeeView.class
-com\example\crud\repository\EmployeeRepository.class
 com\example\crud\CrudVaadinApplication.class
-com\example\crud\service\EmployeeService.class

@@ -17,7 +17,6 @@ import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Locale;
-import java.util.Map;
 
 @Route("")
 public class EmployeeView extends VerticalLayout {
