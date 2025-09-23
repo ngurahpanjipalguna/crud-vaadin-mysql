@@ -1,0 +1,123 @@
+/* Modern grid styling - merah putih */
+.modern-grid {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(220, 53, 69, 0.2); /* shadow merah tipis */
+}
+
+.modern-grid::part(header-cell) {
+    background-color: #dc3545; /* merah */
+    font-weight: 600;
+    color: #fff; /* putih */
+}
+
+@font-face {
+    font-family: 'Noto Sans Balinese';
+    src: url('https://fonts.gstatic.com/s/notosansbalinese/v15/XYZ.woff2') format('woff2');
+}
+
+.balinese-text {
+    font-family: 'Noto Sans Balinese', sans-serif;
+}
+
+
+.modern-grid::part(cell) {
+    background-color: #fff; /* putih */
+    border-bottom: 1px solid #dc3545; /* merah */
+}
+
+.modern-grid::part(row):nth-child(even) {
+    background-color: #fff; /* putih, hapus stripe abu */
+}
+
+/* Toolbar */
+.toolbar {
+    background-color: #fff; /* putih */
+    border-bottom: 2px solid #dc3545; /* merah */
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.1);
+}
+
+.view-title {
+    margin: 0;
+    color: #dc3545; /* merah */
+    font-weight: 600;
+}
+
+/* Buttons */
+.primary-button {
+    background-color: #dc3545; /* merah */
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px 16px;
+    border: none;
+}
+
+.primary-button:hover {
+    background-color: #c82333; /* merah tua */
+}
+
+.secondary-button {
+    background-color: #fff; /* putih */
+    color: #dc3545; /* merah */
+    border: 2px solid #dc3545;
+    border-radius: 6px;
+    padding: 10px 16px;
+}
+
+.secondary-button:hover {
+    background-color: #f8d7da; /* merah muda */
+}
+
+.danger-button {
+    background-color: #dc3545; /* merah */
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px 16px;
+}
+
+.danger-button:hover {
+    background-color: #c82333;
+}
+
+.icon-button {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Dialog & form */
+.form-dialog, .confirm-dialog {
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.form-title, .dialog-title {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.dialog-message {
+    color: #6c757d; /* teks abu */
+    line-height: 1.5;
+}
+
+/* Language select */
+.language-select {
+    width: 160px;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .toolbar {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 16px;
+    }
+    .language-select {
+        width: 100%;
+    }
+}

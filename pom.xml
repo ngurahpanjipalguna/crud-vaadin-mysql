@@ -8,6 +8,17 @@
     <packaging>jar</packaging>
     <name>crud-vaadin-mysql</name>
     <description>CRUD App with Vaadin and MySQL</description>
+    <profiles>
+    <profile>
+        <id>production</id>
+        <properties>
+            <spring.profiles.active>prod</spring.profiles.active>
+        </properties>
+    </profile>
+</profiles>
+
+
+
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -55,6 +66,19 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+    <groupId>com.vaadin</groupId>
+    <artifactId>vaadin-maven-plugin</artifactId>
+    <version>${vaadin.version}</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>prepare-frontend</goal>
+                <goal>build-frontend</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
         </plugins>
     </build>
 </project>
