@@ -119,6 +119,13 @@ public class EmployeeView extends VerticalLayout {
                 .setSortable(true)
                 .setAutoWidth(true);
 
+          grid.addColumn(Employee::getTime)
+                // .setHeader(bundle.getString("grid.position"))
+                .setResizable(true)
+                .setSortable(true)
+                .setAutoWidth(true);
+
+
         // Action column
         grid.addComponentColumn(employee -> {
             Button editButton = new Button(new Icon(VaadinIcon.EDIT));

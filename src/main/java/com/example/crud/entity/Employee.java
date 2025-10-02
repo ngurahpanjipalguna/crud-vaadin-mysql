@@ -1,5 +1,9 @@
 package com.example.crud.entity;
 
+import java.time.LocalDateTime;
+
+import org.springframework.cglib.core.Local;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,14 +29,17 @@ public class Employee {
     @NotBlank(message = "Position is required")
     @Size(min = 2, max = 50, message = "Position must be between 2-50 characters")
     private String position;
+
+    private LocalDateTime time=LocalDateTime.now();
     
     // Constructors, getters, and setters
     public Employee() {}
     
-    public Employee(String name, String email, String position) {
+    public Employee(String name, String email, String position,LocalDateTime time) {
         this.name = name;
         this.email = email;
         this.position = position;
+        this.time=time;
     }
     
     // Getters and setters
@@ -47,4 +54,8 @@ public class Employee {
     
     public String getPosition() { return position; }
     public void setPosition(String position) { this.position = position; }
+
+    
+    public LocalDateTime getTime() { return time; }
+    public void setTime(LocalDateTime time) { this.time = time; }
 }

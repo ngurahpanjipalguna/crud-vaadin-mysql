@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cruddb
+      TZ: Asia/Makassar
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  vaadin-app:
+    build: .
+    container_name: vaadin-app
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/cruddb?allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_PROPERTIES_HIBERNATE_DILECT: org.hibernate.dialect.MySQLDialect
+      TZ: Asia/Makassar
+      JAVA_OPTS: "-Duser.timezone=Asia/Makassar"
+
+volumes:
+  mysql-data:
